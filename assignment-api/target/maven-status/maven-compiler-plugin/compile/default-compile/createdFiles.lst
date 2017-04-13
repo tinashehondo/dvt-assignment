@@ -1,0 +1,4 @@
+za/co/discovery/api/services/config/WebAppInitConfig.class
+za/co/discovery/api/services/config/ApiServiceConfig.class
+za/co/discovery/api/services/rest/RouteRestApi.class
+za/co/discovery/api/services/rest/PlanetRestApi.class

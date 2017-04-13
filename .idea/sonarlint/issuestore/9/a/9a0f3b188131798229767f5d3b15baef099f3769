@@ -1,0 +1,6 @@
+
+Csquid:S1068")Remove this unused "nodes" private field.(ü§òëþÿÿÿÿ
+†squid:S1319"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(¯õÐ™
+@squid:S1168"+Return an empty collection instead of null.(¥¹ï
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ÃžÆ—
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(´þÄ’ûÿÿÿÿ

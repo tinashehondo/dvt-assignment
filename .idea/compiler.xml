@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="assigment-api" />
+        <module name="assigment-web" />
+        <module name="assignment-business" />
+        <module name="assignment-core" />
+        <module name="assignment-dao" />
+        <module name="assignment-model" />
+        <module name="assignment-service" />
+        <module name="assignment-soap-api" />
+        <module name="assignment-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="assigment-api" target="1.5" />
+      <module name="assigment-web" target="1.5" />
+      <module name="assignment" target="1.5" />
+      <module name="assignment-api" target="1.5" />
+      <module name="assignment-business" target="1.5" />
+      <module name="assignment-core" target="1.5" />
+      <module name="assignment-dao" target="1.5" />
+      <module name="assignment-model" target="1.5" />
+      <module name="assignment-service" target="1.5" />
+      <module name="assignment-soap-api" target="1.5" />
+      <module name="assignment-web" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

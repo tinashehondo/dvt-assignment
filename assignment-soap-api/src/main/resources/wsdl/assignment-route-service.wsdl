@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.discovery/assignment/api/soap" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="PaymentService" targetNamespace="http://www.discovery/assignment/api/soap">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.discovery/assignment/api/soap" xmlns:ns1="http://www.discovery/assignment/api" elementFormDefault="unqualified" targetNamespace="http://www.discovery/assignment/api/soap" version="1.0">
+
+  <xs:import namespace="http://www.discovery/assignment/api"/>
+
+  <xs:element name="calculateShortestRoute" type="tns:calculateShortestRoute"/>
+
+  <xs:element name="calculateShortestRouteResponse" type="tns:calculateShortestRouteResponse"/>
+
+  <xs:complexType name="calculateShortestRoute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="routeRequest" type="ns1:routeRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="calculateShortestRouteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:routeResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.discovery/assignment/api" targetNamespace="http://www.discovery/assignment/api" version="1.0">
+
+  <xs:complexType name="routeRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="distance" type="xs:string"/>
+      <xs:element minOccurs="0" name="distance" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="routeResponse">
+    <xs:sequence>
+      <xs:element name="distance" type="xs:double"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="planets" type="tns:planet"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="planet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="node" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="calculateShortestRouteResponse">
+    <wsdl:part element="tns:calculateShortestRouteResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="calculateShortestRoute">
+    <wsdl:part element="tns:calculateShortestRoute" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ShortestRoutePort">
+    <wsdl:operation name="calculateShortestRoute">
+      <wsdl:input message="tns:calculateShortestRoute" name="calculateShortestRoute">
+    </wsdl:input>
+      <wsdl:output message="tns:calculateShortestRouteResponse" name="calculateShortestRouteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PaymentServiceSoapBinding" type="tns:ShortestRoutePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="calculateShortestRoute">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="calculateShortestRoute">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="calculateShortestRouteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PaymentService">
+    <wsdl:port binding="tns:PaymentServiceSoapBinding" name="ShortestRoutePort">
+      <soap:address location="http://localhost:8080/soapapi/assignment-route-service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
