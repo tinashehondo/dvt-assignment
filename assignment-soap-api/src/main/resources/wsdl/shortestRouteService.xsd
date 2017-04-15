@@ -1,30 +1,12 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.discovery/assignment/api/soap" xmlns:ns1="http://www.discovery/assignment/api" elementFormDefault="unqualified" targetNamespace="http://www.discovery/assignment/api/soap" version="1.0">
-
-    <xs:import namespace="http://www.discovery/assignment/api"/>
-
-    <xs:element name="calculateShortestRoute" type="tns:calculateShortestRoute"/>
-
-    <xs:element name="calculateShortestRouteResponse" type="tns:calculateShortestRouteResponse"/>
-
-    <xs:complexType name="calculateShortestRoute">
-        <xs:sequence>
-            <xs:element minOccurs="0" name="routeRequest" type="ns1:routeRequest"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="calculateShortestRouteResponse">
-        <xs:sequence>
-            <xs:element minOccurs="0" name="return" type="ns1:routeResponse"/>
-        </xs:sequence>
-    </xs:complexType>
-
-</xs:schema>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.discovery/assignment/api" targetNamespace="http://www.discovery/assignment/api" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ns1="http://www.discovery/assignment/api/soap"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.discovery/assignment/api/soap" version="1.0">
 
 <xs:complexType name="routeRequest">
     <xs:sequence>
-        <xs:element minOccurs="0" name="distance" type="xs:string"/>
-        <xs:element minOccurs="0" name="distance" type="xs:string"/>
+        <xs:element minOccurs="0" name="destination" type="xs:string"/>
     </xs:sequence>
 </xs:complexType>
 
@@ -39,6 +21,18 @@
     <xs:sequence>
         <xs:element minOccurs="0" name="node" type="xs:string"/>
         <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateShortestRoute">
+    <xs:sequence>
+        <xs:element minOccurs="0" name="routeRequest" type="ns1:routeRequest"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateShortestRouteResponse">
+    <xs:sequence>
+        <xs:element minOccurs="0" name="return" type="ns1:routeResponse"/>
     </xs:sequence>
 </xs:complexType>
 

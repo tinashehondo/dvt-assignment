@@ -6,6 +6,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/assignment-api" />
     <file type="web" url="file://$PROJECT_DIR$/assignment-soap-api" />
+    <file type="web" url="file://$PROJECT_DIR$/assignment-soap-endpoint-api" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

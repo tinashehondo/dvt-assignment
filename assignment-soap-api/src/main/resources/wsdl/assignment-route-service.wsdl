@@ -25,8 +25,8 @@
 
   <xs:complexType name="routeRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="distance" type="xs:string"/>
-      <xs:element minOccurs="0" name="distance" type="xs:string"/>
+      <xs:element name="origin" type="xs:string"/>
+      <xs:element minOccurs="0" name="destination" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 

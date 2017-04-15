@@ -14,7 +14,8 @@ public class RouteRequest {
 
     private String origin;
     private String destination;
-    @XmlElement(name = "origin", required = false)
+
+    @XmlElement(name = "origin", required = true)
     public String getOrigin() {
         return origin;
     }
