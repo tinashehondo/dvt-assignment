@@ -22,7 +22,7 @@ public class SoapConfig {
 	@Bean(name = "service")
 	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema kweseSchema) {
 		final DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("ShortestRouteSoapApi");
+		wsdl11Definition.setPortTypeName("ShortestRouteApi");
 		wsdl11Definition.setLocationUri("/soapapi/service");
 		wsdl11Definition.setTargetNamespace("http://www.discovery/assignment/api/soap");
 		wsdl11Definition.setSchema(kweseSchema);
