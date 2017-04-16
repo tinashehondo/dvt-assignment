@@ -9,5 +9,5 @@ import za.co.discovery.model.Route;
  */
 
 public interface RouteRepository extends JpaRepository<Route,Integer> {
-    Route findRouteByRouteId(String routeId);
+    Route findRouteByRouteId(Integer routeId);
 }

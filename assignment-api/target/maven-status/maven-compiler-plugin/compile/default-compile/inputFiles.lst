@@ -1,4 +1,5 @@
 /home/tinashehondo/code/assignment/assignment-api/src/main/java/za/co/discovery/api/services/config/WebAppInitConfig.java
-/home/tinashehondo/code/assignment/assignment-api/src/main/java/za/co/discovery/api/services/config/ApiServiceConfig.java
+/home/tinashehondo/code/assignment/assignment-api/src/main/java/za/co/discovery/api/services/config/WebConfig.java
 /home/tinashehondo/code/assignment/assignment-api/src/main/java/za/co/discovery/api/services/rest/PlanetRestApi.java
+/home/tinashehondo/code/assignment/assignment-api/src/main/java/za/co/discovery/api/services/config/RestConfig.java
 /home/tinashehondo/code/assignment/assignment-api/src/main/java/za/co/discovery/api/services/rest/RouteRestApi.java

@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface RouteService {
     Route saveRoute(Route route);
-    Route findRouteById(String id);
+    Route findRouteById(Integer id);
     List<Route> findAllRoutes();
     void deleteRoute(Route route);
 }

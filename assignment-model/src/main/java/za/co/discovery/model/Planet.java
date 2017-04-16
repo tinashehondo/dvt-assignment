@@ -1,18 +1,22 @@
 package za.co.discovery.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Created by tinashehondo on 4/9/17.
  */
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType( name = "Planet")
 @Entity
 public class Planet {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+  // @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String node;
     private String name;
 

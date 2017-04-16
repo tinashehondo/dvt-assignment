@@ -27,10 +27,6 @@ F
 assignment-api/pom.xml,2/0/20b711ed89aedd8910c7f93a5894a6315ef14a9d
 H
 assignment-api/derby.log,6/4/6421ed58cae0034fa8f327c6487ad1159e1c3210
-†
-Vassignment-api/src/main/java/za/co/discovery/api/services/config/ApiServiceConfig.java,b/8/b87328d970b9fdde22f0edf40a6cecaf5a4c8c49
-†
-Vassignment-api/src/main/java/za/co/discovery/api/services/config/WebAppInitConfig.java,c/a/ca622fc612225ea52946aaee54d96dbc57feb3b5
 „
 Tassignment-dao/src/main/java/za/co/discovery/repository/planet/PlanetRepository.java,f/2/f26543687a6213dccd7c2ea24a123b6f15b3b074
 ‚
@@ -43,8 +39,6 @@ c
 Qassignment-api/src/main/java/za/co/discovery/api/services/rest/PlanetRestApi.java,7/5/75e1e544da0809a7a3110e73a025f18646d24aa8
 €
 Passignment-api/src/main/java/za/co/discovery/api/services/rest/RouteRestApi.java,6/c/6cb02e06eeb4802f8ddbef2a7ad2e68de1042bd7
-Š
-Zassignment-service/src/main/java/za/co/discovery/service/config/ServicesServiceConfig.java,a/6/a60bf33307f73486c0694a1c4554a00f08d26251
 ‚
 Rassignment-service/src/main/java/za/co/discovery/service/planet/PlanetService.java,c/2/c227e65c2329a7171c9160e2f137f1ee7889dd90
 †

@@ -1,6 +1,5 @@
 package za.co.discovery.repository.config;
 
-import org.hsqldb.util.DatabaseManagerSwing;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -15,7 +14,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -32,7 +30,7 @@ public class DataDaoConfiguration {
     @Resource
     private Environment env;
 
-    @PostConstruct
+   /* @PostConstruct
     public void startDBManager() {
 
         //hsqldb
@@ -44,19 +42,31 @@ public class DataDaoConfiguration {
         //h2
         //DatabaseManagerSwing.main(new String[] { "--url", "jdbc:h2:mem:testdb", "--user", "sa", "--password", "" });
 
-    }
+    }*/
 
+    /* @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
+         //dataSource.set
+        dataSource.setUrl(env.getProperty("jdbc.url"));
+        dataSource.setUsername(env.getProperty("jdbc.username"));
+        dataSource.setPassword(env.getProperty("jdbc.password"));
+        return dataSource;
+    }*/
 
     @Bean
     public DataSource dataSource() {
-        return new EmbeddedDatabaseBuilder()
+  return new EmbeddedDatabaseBuilder()
                 //.generateUniqueName(true)
                 .setType(EmbeddedDatabaseType.DERBY)
                 .setScriptEncoding("UTF-8")
                 .ignoreFailedDrops(true)
-                //.addScript("/db/sql/create-route.sql")
-                //.addScripts("/db/sql/create-db.sql", "/db/sql/insert-data.sql")
+                //.addScript("/db/sql/create-db.sql")
+               // .addScripts("/db/sql/schema.sql","/db/sql/create-db.sql", "/db/sql/insert-data.sql")
                 .build();
+
+
     }
 
     private Properties hibProperties() {

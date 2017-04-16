@@ -5,6 +5,7 @@
            elementFormDefault="qualified"
            targetNamespace="http://www.discovery/assignment/api/soap" version="1.0">
 
+
 <xs:complexType name="routeRequest">
     <xs:sequence>
         <xs:element minOccurs="0" name="destination" type="xs:string"/>

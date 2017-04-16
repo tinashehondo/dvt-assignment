@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Wed Apr 12 15:51:09 CAT 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-015b-626e-a382-000018a133e8 
-on database directory memory:/home/tinashehondo/code/assignment/assignment-api/testdb with class loader WebAppClassLoader=assignment-api@bb9ab64 
+Sun Apr 16 11:32:47 CAT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-015b-761b-8884-0000189e7138 
+on database directory memory:/home/tinashehondo/code/assignment/assignment-api/testdb with class loader WebAppClassLoader=assignment-api@2184b4f4 
 Loaded from file:/home/tinashehondo/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_111-b14
@@ -12,5 +12,5 @@ os.version=4.4.0-72-generic
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Apr 12 15:51:16 CAT 2017:
-Shutting down instance a816c00e-015b-626e-a382-000018a133e8 on database directory memory:/home/tinashehondo/code/assignment/assignment-api/testdb with class loader WebAppClassLoader=assignment-api@bb9ab64 
+Sun Apr 16 11:33:32 CAT 2017:
+Shutting down instance a816c00e-015b-761b-8884-0000189e7138 on database directory memory:/home/tinashehondo/code/assignment/assignment-api/testdb with class loader WebAppClassLoader=assignment-api@2184b4f4 

@@ -4,7 +4,6 @@ package za.co.discovery.api.services.rest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.util.UriComponentsBuilder;
 import za.co.discovery.model.Planet;
 import za.co.discovery.service.planet.PlanetService;
 
@@ -37,12 +35,12 @@ public class PlanetRestApi {
         System.out.print("**********************testing");
         Planet planet = new Planet();
         planet.setNode("B");
-       // planet.setName("A");
         planet.setName("ZIM");
         System.out.print("**********************testing");
         System.out.print("**********************testing*****"+planetService.savePlanet(planet));
         return "index";
     }
+
 
 
     @RequestMapping(method = RequestMethod.GET)
@@ -70,13 +68,12 @@ public class PlanetRestApi {
         return new ResponseEntity<Planet>(planet, HttpStatus.OK);
     }
 
+
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Void> create(@RequestBody Planet planet, UriComponentsBuilder ucBuilder){
+    public ResponseEntity<Void> create(@RequestBody Planet planet){
         logger.info("create Planet . Planet with planet {} ", planet);
         planetService.savePlanet(planet);
-        HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/planet/{id}").buildAndExpand(planet.getNode()).toUri());
-        return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
+        return new ResponseEntity<Void>(HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)

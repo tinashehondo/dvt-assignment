@@ -14,7 +14,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 public class ShortestRouteApi {
 
 
-    @PayloadRoot(namespace = "http://www.discovery/assignment/api/soap", localPart = "calculateShortestRoute")
+    @PayloadRoot(namespace = "http://www.discovery/assignment/api", localPart = "calculateShortestRoute")
     @ResponsePayload
     public CalculateShortestRouteResponse process(@RequestPayload CalculateShortestRoute request) {
 

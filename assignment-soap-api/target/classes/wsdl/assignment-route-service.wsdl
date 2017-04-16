@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.discovery/assignment/api/soap" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="PaymentService" targetNamespace="http://www.discovery/assignment/api/soap">
   <wsdl:types>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.discovery/assignment/api/soap" xmlns:ns1="http://www.discovery/assignment/api" elementFormDefault="unqualified" targetNamespace="http://www.discovery/assignment/api/soap" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.discovery/assignment/api/soap"
+           xmlns:ns1="http://www.discovery/assignment/api" elementFormDefault="unqualified"
+           targetNamespace="http://www.discovery/assignment/api/soap" version="1.0">
 
   <xs:import namespace="http://www.discovery/assignment/api"/>
 
@@ -25,8 +28,8 @@
 
   <xs:complexType name="routeRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" name="distance" type="xs:string"/>
-      <xs:element minOccurs="0" name="distance" type="xs:string"/>
+      <xs:element name="origin" type="xs:string"/>
+      <xs:element minOccurs="0" name="destination" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 

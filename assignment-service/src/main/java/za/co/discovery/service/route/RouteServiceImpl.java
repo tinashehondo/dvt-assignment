@@ -29,7 +29,7 @@ public class RouteServiceImpl implements RouteService {
         return routeRepository.save(route);
     }
 
-    public Route findRouteById(String id) {
+    public Route findRouteById(Integer id) {
         return routeRepository.findRouteByRouteId(id);
     }
 
