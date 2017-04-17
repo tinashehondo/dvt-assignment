@@ -5,87 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b0b6553-44f4-4140-9109-733ec988a232" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/java/za/co/discovery/repository/config/AppBootStrapConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/java/za/co/discovery/repository/utils/CsvFileReaderUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/db.data/planet.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/db.data/route.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/db/sql/create-planet.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/db/sql/create-route.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/db/sql/create-schema.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/db/sql/insert-data.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/route.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-service/derby.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/core/ShortestPathCalculator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/core/ShortestPathCalculatorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/soap/ShortestRouteSoapApi.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/utils/constants/SoapConstants.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-dao/src/main/resources/db/excel/.~lock.planet.xls#" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-dao/target/classes/db/excel/.~lock.planet.xls#" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/assignment-soap-api.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/java/za/co/discovery/soap/api/ShortestRouteService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/java/za/co/discovery/soap/api/ShortestRouteServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/java/za/co/discovery/soap/config/SoapApiServiceConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/java/za/co/discovery/soap/model/Planet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/java/za/co/discovery/soap/model/RouteRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/java/za/co/discovery/soap/model/RouteResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/resources/soap-api-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/resources/wsdl/assignment-route-service.wsdl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/resources/wsdl/shortestRouteService.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/classes/soap-api-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/classes/wsdl/assignment-route-service.wsdl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/classes/wsdl/shortestRouteService.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/classes/za/co/discovery/soap/api/ShortestRouteService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/classes/za/co/discovery/soap/api/ShortestRouteServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/classes/za/co/discovery/soap/config/SoapApiServiceConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/classes/za/co/discovery/soap/model/Planet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/classes/za/co/discovery/soap/model/RouteRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/classes/za/co/discovery/soap/model/RouteResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/RootInitializer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/soap/ShortestRouteApi.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assignment-soap-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/db.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-api/target/classes/za/co/discovery/api/services/config/WebAppInitConfig.class" afterPath="$PROJECT_DIR$/assignment-api/target/classes/za/co/discovery/api/services/config/WebAppInitConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-core/target/classes/za/co/discovery/logic/ShortestPathCalculator.class" afterPath="$PROJECT_DIR$/assignment-core/target/classes/za/co/discovery/logic/ShortestPathCalculator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-dao/target/classes/za/co/discovery/repository/config/DataDaoConfiguration.class" afterPath="$PROJECT_DIR$/assignment-dao/target/classes/za/co/discovery/repository/config/DataDaoConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-model/target/classes/za/co/discovery/model/Planet.class" afterPath="$PROJECT_DIR$/assignment-model/target/classes/za/co/discovery/model/Planet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-model/target/classes/za/co/discovery/model/Route.class" afterPath="$PROJECT_DIR$/assignment-model/target/classes/za/co/discovery/model/Route.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/assigment_api_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/assigment_api_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/assigment_api_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/assigment_api_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/assignment_soap_endpoint_api_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/assignment_soap_endpoint_api_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_5_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_5_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_csv_2_5_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-api/hs_err_pid18028.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-api/route.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-api/route_tmp.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/planet.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-api/assigment-api.iml" afterPath="$PROJECT_DIR$/assignment-api/assigment-api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-api/pom.xml" afterPath="$PROJECT_DIR$/assignment-api/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-api/src/main/java/za/co/discovery/api/services/config/WebAppInitConfig.java" afterPath="$PROJECT_DIR$/assignment-api/src/main/java/za/co/discovery/api/services/config/WebAppInitConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-core/src/main/java/za/co/discovery/logic/ShortestPathCalculator.java" afterPath="$PROJECT_DIR$/assignment-core/src/main/java/za/co/discovery/logic/ShortestPathCalculator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-dao/assignment-dao.iml" afterPath="$PROJECT_DIR$/assignment-dao/assignment-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-dao/pom.xml" afterPath="$PROJECT_DIR$/assignment-dao/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-dao/src/main/java/za/co/discovery/repository/config/DataDaoConfiguration.java" afterPath="$PROJECT_DIR$/assignment-dao/src/main/java/za/co/discovery/repository/config/DataDaoConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/assignment-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/assignment-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-model/src/main/java/za/co/discovery/model/Planet.java" afterPath="$PROJECT_DIR$/assignment-model/src/main/java/za/co/discovery/model/Planet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-model/src/main/java/za/co/discovery/model/Route.java" afterPath="$PROJECT_DIR$/assignment-model/src/main/java/za/co/discovery/model/Route.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-service/assignment-service.iml" afterPath="$PROJECT_DIR$/assignment-service/assignment-service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-service/src/test/java/za/co/discovery/service/route/RouteServiceImplTest.java" afterPath="$PROJECT_DIR$/assignment-service/src/test/java/za/co/discovery/service/route/RouteServiceImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-soap-endpoint-api/assignment-soap-endpoint-api.iml" afterPath="$PROJECT_DIR$/assignment-soap-endpoint-api/assignment-soap-endpoint-api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-soap-endpoint-api/pom.xml" afterPath="$PROJECT_DIR$/assignment-soap-endpoint-api/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/SoapApiInitializer.java" afterPath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/SoapApiInitializer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/SoapConfig.java" afterPath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/SoapConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/resources/xsd/shortestRouteService.xsd" afterPath="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/resources/xsd/shortestRouteService.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment-dao/src/main/resources/db/sql/insert-data.sql" afterPath="$PROJECT_DIR$/assignment-dao/src/main/resources/db/sql/insert-data.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="assignment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -127,21 +66,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="route.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment-dao/src/main/resources/route.csv">
+      <file leaf-file-name="PlanetRestApi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment-api/src/main/java/za/co/discovery/api/services/rest/PlanetRestApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="145">
+              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Route.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment-model/src/main/java/za/co/discovery/model/Route.java">
+      <file leaf-file-name="RouteRestApi.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assignment-api/src/main/java/za/co/discovery/api/services/rest/RouteRestApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="18" column="17" selection-start-line="15" selection-start-column="3" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="528">
+              <caret line="116" column="66" selection-start-line="116" selection-start-column="66" selection-end-line="116" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -150,91 +91,11 @@
       <file leaf-file-name="ShortestRouteSoapApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/soap/ShortestRouteSoapApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="65" column="43" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="43" />
+            <state relative-caret-position="177">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShortestPathCalculator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/core/ShortestPathCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1275">
-              <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SoapConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/SoapConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1412#1413#0" expanded="true" />
-                <element signature="e#1444#1445#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SoapApiInitializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/SoapApiInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShortestPathCalculatorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/core/ShortestPathCalculatorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="54" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#2043#0" expanded="true" />
-                <marker date="1492447153734" expanded="false" signature="1735:1746" ph=" { " />
-                <marker date="1492447153734" expanded="false" signature="1792:1798" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlanetRestApiTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment-api/src/test/java/za/co/discovery/api/services/rest/PlanetRestApiTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RouteServiceImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment-service/src/test/java/za/co/discovery/service/route/RouteServiceImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -292,7 +153,6 @@
         <option value="$PROJECT_DIR$/assignment-core/src/main/java/za/co/discovery/logic/ShortestPathCalculator.java" />
         <option value="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/soap/ShortestRouteApi.java" />
         <option value="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/SoapApiInitializer.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/SoapConfig.java" />
         <option value="$PROJECT_DIR$/assignment-soap-endpoint-api/pom.xml" />
         <option value="$PROJECT_DIR$/assignment-dao/src/main/resources/db.data/planet.csv" />
@@ -311,6 +171,7 @@
         <option value="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/core/ShortestPathCalculator.java" />
         <option value="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/core/ShortestPathCalculatorTest.java" />
         <option value="$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/soap/ShortestRouteSoapApi.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -1002,7 +863,7 @@
       <workItem from="1492088685109" duration="667000" />
       <workItem from="1492225867533" duration="23436000" />
       <workItem from="1492288342662" duration="7788000" />
-      <workItem from="1492296881920" duration="56565000" />
+      <workItem from="1492296881920" duration="57288000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1492089000302</created>
@@ -1046,7 +907,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492348600463</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="removed soap module">
+      <created>1492447579290</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1492447579290</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1082,7 +950,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138672000" />
+    <option name="totallyTimeSpent" value="139395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="999" extended-state="6" />
@@ -1109,7 +977,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6696329" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37263626" sideWeight="0.4914621" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24813233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24759872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1137,7 +1005,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="refactored soap service" />
     <MESSAGE value="refactored api service" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored api service" />
+    <MESSAGE value="removed soap module" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed soap module" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1226,14 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment-api/src/main/java/za/co/discovery/api/services/rest/RouteRestApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="116" column="66" selection-start-line="116" selection-start-column="66" selection-end-line="116" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -1342,24 +1203,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment-api/src/main/java/za/co/discovery/api/services/rest/PlanetRestApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1531,22 +1374,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/config/SoapConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1412#1413#0" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1412#1413#0" expanded="false" />
+            <element signature="e#1444#1445#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1571,16 +1406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/soap/ShortestRouteSoapApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="65" column="43" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/core/ShortestPathCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1275">
@@ -1588,6 +1413,50 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="4" selection-start-column="3" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment-soap-endpoint-api/src/main/java/za/co/discovery/soap/endpoint/api/soap/ShortestRouteSoapApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment-api/src/main/java/za/co/discovery/api/services/rest/PlanetRestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment-api/src/main/java/za/co/discovery/api/services/rest/RouteRestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="116" column="66" selection-start-line="116" selection-start-column="66" selection-end-line="116" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>

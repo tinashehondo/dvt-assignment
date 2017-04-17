@@ -15,7 +15,6 @@
         <module>assignment-api</module>
         <module>assignment-web</module>
         <module>assignment-core</module>
-        <module>assignment-soap-api</module>
         <module>assignment-soap-endpoint-api</module>
     </modules>
 
