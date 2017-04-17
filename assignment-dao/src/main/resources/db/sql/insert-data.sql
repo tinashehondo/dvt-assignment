@@ -1,0 +1,2 @@
+INSERT INTO Planet VALUES ('A', 'EARTHH');
+INSERT INTO Planet VALUES ('B', 'MOON');

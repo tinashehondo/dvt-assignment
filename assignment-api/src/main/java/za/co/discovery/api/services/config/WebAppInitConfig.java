@@ -1,6 +1,7 @@
 package za.co.discovery.api.services.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import za.co.discovery.repository.config.AppBootStrapConfig;
 import za.co.discovery.repository.config.DataDaoConfiguration;
 import za.co.discovery.service.config.AssignmentServiceConfig;
 
@@ -13,12 +14,12 @@ public class WebAppInitConfig extends AbstractAnnotationConfigDispatcherServletI
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] {RestConfig.class,DataDaoConfiguration.class, AssignmentServiceConfig.class };
+        return new Class[] {DataDaoConfiguration.class, AssignmentServiceConfig.class,AppBootStrapConfig.class };
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return null;
+        return new Class[] {RestConfig.class};
     }
 
     @Override

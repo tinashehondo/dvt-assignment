@@ -1,3 +1,5 @@
+za/co/discovery/repository/utils/CsvFileReaderUtil.class
 za/co/discovery/repository/route/RouteRepository.class
 za/co/discovery/repository/planet/PlanetRepository.class
+za/co/discovery/repository/config/AppBootStrapConfig.class
 za/co/discovery/repository/config/DataDaoConfiguration.class

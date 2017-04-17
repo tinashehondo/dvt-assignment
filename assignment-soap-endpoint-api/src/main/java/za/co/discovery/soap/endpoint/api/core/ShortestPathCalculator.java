@@ -1,4 +1,4 @@
-package za.co.discovery.logic;
+package za.co.discovery.soap.endpoint.api.core;
 
 
 import org.springframework.stereotype.Component;
@@ -13,18 +13,25 @@ import java.util.*;
  */
 @Component
 public class ShortestPathCalculator {
-    private final List<Planet> nodes;
-    private final List<Route> edges;
+    private  List<Planet> nodes;
+    private  List<Route> edges;
     private Set<Planet> settledNodes;
     private Set<Planet> unSettledNodes;
     private Map<Planet, Planet> predecessors;
     private Map<Planet, Double> distance;
 
-    public ShortestPathCalculator(Graph graph) {
+  /*  public ShortestPathCalculator(Graph graph) {
+        // create a copy of the array so that we can operate on this array
+        this.nodes = new ArrayList<Planet>(graph.getVertexes());
+        this.edges = new ArrayList<Route>(graph.getEdges());
+    }*/
+
+    public void setGraph(Graph graph) {
         // create a copy of the array so that we can operate on this array
         this.nodes = new ArrayList<Planet>(graph.getVertexes());
         this.edges = new ArrayList<Route>(graph.getEdges());
     }
+
 
     public void execute(Planet source) {
         settledNodes = new HashSet<Planet>();

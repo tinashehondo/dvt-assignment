@@ -22,6 +22,9 @@ public class Planet {
 
     public Planet() {
     }
+    public Planet(String node) {
+        this.node=node;
+    }
 
     public Planet(String node, String name) {
         this.node = node;

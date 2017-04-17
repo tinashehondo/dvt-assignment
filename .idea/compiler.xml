@@ -29,7 +29,6 @@
         <module name="assignment-dao" />
         <module name="assignment-model" />
         <module name="assignment-service" />
-        <module name="assignment-soap-api" />
         <module name="assignment-soap-endpoint-api" />
         <module name="assignment-web" />
       </profile>

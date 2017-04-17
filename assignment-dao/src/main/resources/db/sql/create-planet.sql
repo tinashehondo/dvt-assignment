@@ -1,0 +1,1 @@
+create table Planet (node varchar(255) not null, name varchar(255), primary key (node));

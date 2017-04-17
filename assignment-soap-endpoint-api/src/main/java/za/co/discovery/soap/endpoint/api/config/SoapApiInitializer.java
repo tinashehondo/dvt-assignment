@@ -10,15 +10,17 @@ import javax.servlet.ServletRegistration.Dynamic;
 
 public class SoapApiInitializer implements WebApplicationInitializer {
 
+
 	public void onStartup(ServletContext servletContext) throws ServletException {
-		final AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
-		ctx.register(SoapConfig.class);
-		ctx.setServletContext(servletContext);
+
+		final AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
+		webApplicationContext.register(SoapConfig.class);
+		webApplicationContext.setServletContext(servletContext);
 		final MessageDispatcherServlet servlet = new MessageDispatcherServlet();
-		servlet.setApplicationContext(ctx);
+		servlet.setApplicationContext(webApplicationContext);
 		servlet.setTransformWsdlLocations(true);
 		final Dynamic dynamic = servletContext.addServlet("soapDispatcher", servlet);
-		dynamic.addMapping("/soapapi/*");
+		dynamic.addMapping("/ws/*");
 		dynamic.setLoadOnStartup(1);
 	}
 

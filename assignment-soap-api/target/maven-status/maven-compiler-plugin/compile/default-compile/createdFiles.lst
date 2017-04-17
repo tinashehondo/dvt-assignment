@@ -1,6 +1,0 @@
-za/co/discovery/soap/model/Planet.class
-za/co/discovery/soap/config/SoapApiServiceConfig.class
-za/co/discovery/soap/model/RouteResponse.class
-za/co/discovery/soap/api/ShortestRouteService.class
-za/co/discovery/soap/api/ShortestRouteServiceImpl.class
-za/co/discovery/soap/model/RouteRequest.class

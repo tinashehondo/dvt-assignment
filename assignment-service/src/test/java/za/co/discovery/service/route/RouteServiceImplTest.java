@@ -42,6 +42,7 @@ public class RouteServiceImplTest {
 
         Route route = new Route();
 
+        route.setRouteId(1);
         route.setOrigin(origin);
         route.setDestination(destination);
         route.setDistance(1.44);

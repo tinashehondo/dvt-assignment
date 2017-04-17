@@ -5,6 +5,7 @@ import javax.persistence.*;
 /**
  * Created by tinashehondo on 4/9/17.
  */
+
 @Entity
 public class Route {
 

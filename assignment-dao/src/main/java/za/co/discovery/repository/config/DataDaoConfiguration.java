@@ -30,17 +30,42 @@ public class DataDaoConfiguration {
     @Resource
     private Environment env;
 
-   /* @PostConstruct
+    /*@Autowired
+    private RouteRepository routeRepository;
+
+    @Autowired
+    private PlanetRepository planetRepository;
+
+    @PostConstruct
     public void startDBManager() {
 
-        //hsqldb
-       // DatabaseManagerSwing.main(new String[] { "--url", "jdbc:hsqldb:mem:testdb", "--user", "sa", "--password", "" });
+        try {
+
+            System.out.print("####POST CONSTRUCT ####");
+
+            CsvFileReaderUtil csvFileReaderUtil = new CsvFileReaderUtil();
+
+            for (Planet planet :csvFileReaderUtil.getPlanets()) {
+                planetRepository.save(planet);
+
+            }
+
+            for (Route route :csvFileReaderUtil.getRoutes()) {
+                routeRepository.save(route);
+
+            }
+
+            System.out.print("####POST CONSTRUCT DONE ####");
+        }catch (Exception e){
+
+        }
+
+
+
 
         //derby
-        DatabaseManagerSwing.main(new String[] { "--url", "jdbc:derby:memory:testdb;create=true", "--user", "", "--password", "" });
+       DatabaseManagerSwing.main(new String[] { "--url", "jdbc:derby:memory:testdb;create=true", "--user", "", "--password", "" });
 
-        //h2
-        //DatabaseManagerSwing.main(new String[] { "--url", "jdbc:h2:mem:testdb", "--user", "sa", "--password", "" });
 
     }*/
 
@@ -63,7 +88,7 @@ public class DataDaoConfiguration {
                 .setScriptEncoding("UTF-8")
                 .ignoreFailedDrops(true)
                 //.addScript("/db/sql/create-db.sql")
-               // .addScripts("/db/sql/schema.sql","/db/sql/create-db.sql", "/db/sql/insert-data.sql")
+               // .addScripts("/db/create-schema.sql","/db/create-planet.sql", "/db/create-route.sql")
                 .build();
 
 
@@ -102,5 +127,9 @@ public class DataDaoConfiguration {
         txManager.setEntityManagerFactory(entityManagerFactory().getObject());
         return txManager;
     }
+
+
+
+
 
 }
