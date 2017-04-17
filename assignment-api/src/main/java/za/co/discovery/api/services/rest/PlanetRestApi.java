@@ -32,7 +32,7 @@ public class PlanetRestApi {
 
     @RequestMapping(value = {"/test/"}, method = RequestMethod.GET)
     public String test(Model model){
-        System.out.print("**********************testing");
+        logger.info("**********************testing");
         Planet planet = new Planet();
         planet.setNode("B");
         planet.setName("ZIM");
