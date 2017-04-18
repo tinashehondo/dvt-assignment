@@ -15,6 +15,7 @@ import za.co.discovery.model.Graph;
 import za.co.discovery.model.Planet;
 import za.co.discovery.soap.endpoint.api.core.ShortestPathCalculator;
 import za.co.discovery.soap.endpoint.api.utils.constants.SoapConstants;
+import za.co.discovery.soap.endpoint.api.utils.convertors.PlanetModelToPlanet;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -28,58 +29,74 @@ public class ShortestRouteSoapApi {
 
     private static final Logger logger = LoggerFactory.getLogger(ShortestRouteSoapApi.class);
 
-   @Autowired
+    @Autowired
     private RestTemplate restTemplate;
 
     @Autowired
     private ShortestPathCalculator shortestPathCalculator;
 
+    @Autowired
+    private PlanetModelToPlanet planetModelToPlanetConvertor;
+
 
     @PayloadRoot(namespace = SoapConstants.TARGET_NAMESPACE, localPart = "calculateShortestRouteRequest")
     @ResponsePayload
     public CalculateShortestRouteResponse calculateShortestRoute(@RequestPayload CalculateShortestRouteRequest request) {
-        logger.info("*****************testing#########request######" + request);
-        logger.info("*****************testing#########planet Service######{}"+restTemplate);
-        Planet planet = new Planet();
-        planet.setNode("A");
-        planet.setName("Earth");
+        logger.info("******request**" + request);
         try {
-            Planet destinationPlanet = restTemplate.getForObject("http://localhost:8083/assignment-api/planet/"+request.getDestination(),Planet.class);
+            Planet originPlanet = getPlanet(request.getOrigin());
+            Planet destinationPlanet = getPlanet(request.getDestination());
 
-
-
-            Planet[] planets = restTemplate.getForObject("http://localhost:8083/assignment-api/planet/",Planet[].class);
-            List<Planet> planetList = Arrays.asList(planets);
-            //logger.info("******planet***********LIST#########planet Service###list###{}"+planetList);
-            za.co.discovery.model.Route[] routes = restTemplate.getForObject("http://localhost:8083/assignment-api/route/", za.co.discovery.model.Route[].class);
-            List<za.co.discovery.model.Route> routeList =  Arrays.asList(routes);
-           // logger.info("****Route*************LIST#########Route serviceist###{}",routeList);
+            List<Planet> planetList = getAllPlanets();
+            List<za.co.discovery.model.Route> routeList = getAllRoutes();
 
             Graph graph = new Graph(planetList, routeList);
-            //ShortestPathCalculator shortestPathCalculator = new ShortestPathCalculator();
 
-            shortestPathCalculator.setGraph(graph);
-            shortestPathCalculator.execute(planet);
-            LinkedList<Planet> path = shortestPathCalculator.getPath(destinationPlanet);
+            LinkedList<Planet> path = shortestPathCalculator.getShortestPath(graph, originPlanet, destinationPlanet);
 
+            CalculateShortestRouteResponse response = new CalculateShortestRouteResponse();
 
-            for (Planet planetResult : path) {
-                System.out.println(planetResult);
+            discovery.assignment.api.soap.Route route = new discovery.assignment.api.soap.Route();
+            //// TODO: 4/18/17
+            route.setDistance(1.45);
+            // route.getPlanets().add(path)
+
+            for (Planet p : path
+                    ) {
+                route.getPlanets().add(planetModelToPlanetConvertor.convert(p));
+
             }
 
 
-        }catch (Exception e){
-            logger.error("exception **** {}",e);
+            response.setRoute(route);
+
+
+            return response;
+
+        } catch (Exception e) {
+            logger.error("exception **** {}", e);
             e.printStackTrace();
         }
 
 
         CalculateShortestRouteResponse response = new CalculateShortestRouteResponse();
-        final Route route = new Route();
-        route.setDistance(124);
-        response.setRoute(route);
+
         System.out.print("*****************testing#############response##" + response);
         return response;
+    }
+
+    private Planet getPlanet(String node) {
+        return restTemplate.getForObject("http://localhost:8083/assignment-api/planet/" + node, Planet.class);
+    }
+
+    private List<Planet> getAllPlanets() {
+        Planet[] planets = restTemplate.getForObject("http://localhost:8083/assignment-api/planet/", Planet[].class);
+        return Arrays.asList(planets);
+    }
+
+    private List<za.co.discovery.model.Route> getAllRoutes() {
+        za.co.discovery.model.Route[] routes = restTemplate.getForObject("http://localhost:8083/assignment-api/route/", za.co.discovery.model.Route[].class);
+        return Arrays.asList(routes);
     }
 
 

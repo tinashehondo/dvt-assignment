@@ -13,7 +13,7 @@ import za.co.discovery.soap.endpoint.api.utils.constants.SoapConstants;
 
 @Configuration
 @EnableWs
-@ComponentScan(basePackages = {"za.co.discovery.soap.endpoint.api.soap","za.co.discovery.soap.endpoint.api.core"})
+@ComponentScan(basePackages = {"za.co.discovery.soap.endpoint.api.soap","za.co.discovery.soap.endpoint.api.core","za.co.discovery.soap.endpoint.api.utils.convertors"})
 public class SoapConfig {
 
 	@Bean
