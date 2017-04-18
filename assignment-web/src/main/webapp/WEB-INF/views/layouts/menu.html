@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="sidebar">
+    <ul class="nav menu">
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">REST INTEGRATION VIEWS<span
+                    class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a th:href="@{/planet/}" href="/planet/new"> Search Planets </a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">SOAP INTEGRATION VIEWS<span
+                    class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <!--<li><a th:href="@{/provider/}" href="/provider/"> List </a></li>-->
+                <!--<li><a th:href="@{/provider/new}" href="/provider/new"> Create </a></li>-->
+            </ul>
+        </li>
+
+    </ul>
+
+</div>
+</body>
+</html>

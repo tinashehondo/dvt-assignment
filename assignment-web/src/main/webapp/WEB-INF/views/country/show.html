@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" th:include="layouts/template :: page">
+<body>
+<div th:fragment="content">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Country Details</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Country Id:</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" th:text="${country.id}">Country id</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label"> Name:</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" th:text="${country.name}">Name</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label"> Area Code:</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" th:text="${country.areaCode}">Area Code</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label"> Country Code:</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" th:text="${country.countryCode}">Country Code</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label"> Status:</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" th:text="${country.status}">Status</p>
+                    </div>
+                </div>
+            </form>
+
+            <a th:href="${'/cp_admin/country/'}">Countries List</a>
+
+            <br/>
+            <div th:if="${not #lists.isEmpty(providers)}">
+                <h2>Configured Payment Service Providers</h2>
+                <table class="table table-strped">
+                    <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Currency</th>
+                        <th>Currency Code</th>
+                        <th>View</th>
+                        <th>Update Status</th>
+                    </tr>
+                    <tr th:each="provider : ${providers}">
+                        <td th:text="${provider.paymentServiceProvider.providerName}"></td>
+                        <td th:text="${provider.status}"></td>
+                        <td th:text="${provider.currency.name} "></td>
+                        <td th:text="${provider.currency.code} "></td>
+                        <td><a th:href="${'/cp_admin/psp/'+provider.paymentServiceProvider.id}">View</a></td>
+                        <td><a th:href="${'/cp_admin/country/status/update/'+provider.id}">Update Status</a></td>
+
+                    </tr>
+                </table>
+                <br/>
+
+                <a th:href="${'/cp_admin/country/new'}">Add Country</a>
+
+
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
