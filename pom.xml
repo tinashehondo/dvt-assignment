@@ -14,6 +14,7 @@
         <module>assignment-service</module>
         <module>assignment-api</module>
         <module>assignment-soap-endpoint-api</module>
+        <module>assignment-ws.client</module>
     </modules>
 
     <properties>

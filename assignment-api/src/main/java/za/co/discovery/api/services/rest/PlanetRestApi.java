@@ -25,7 +25,6 @@ public class PlanetRestApi {
 
     private static final Logger logger = LoggerFactory.getLogger(PlanetRestApi.class);
 
-
     @Autowired
     private PlanetService planetService;
 
