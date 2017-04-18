@@ -30,7 +30,6 @@
         <module name="assignment-service" />
         <module name="assignment-soap-endpoint-api" />
         <module name="assignment-web" />
-        <module name="assignment-ws.client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

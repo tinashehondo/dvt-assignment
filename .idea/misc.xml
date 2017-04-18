@@ -20,6 +20,7 @@
         <option value="$PROJECT_DIR$/assignment-core/pom.xml" />
         <option value="$PROJECT_DIR$/assignment-soap-api/pom.xml" />
         <option value="$PROJECT_DIR$/assignment-web-old/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment-ws.client/pom.xml" />
       </set>
     </option>
   </component>
