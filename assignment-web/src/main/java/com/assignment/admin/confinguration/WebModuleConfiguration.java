@@ -21,19 +21,9 @@ import java.util.Set;
 
 @Configuration
 @EnableWebMvc
-//@EnableJpaRepositories(basePackageClasses = {CountryRepository.class})
+//@ComponentScan(basePackages = "za.co.discovery.web.controller")
 @ComponentScan(basePackageClasses = {DefaultController.class})
 public class WebModuleConfiguration extends WebMvcConfigurerAdapter{
-
-	@Bean
-	public ChainableJasperReportsViewResolver getJasperReportsViewResolver() {
-		ChainableJasperReportsViewResolver resolver = new ChainableJasperReportsViewResolver();
-		resolver.setPrefix("/WEB-INF/reports/");
-		resolver.setSuffix(".jrxml");
-		resolver.setReportDataKey("datasource");
-		resolver.setOrder(Integer.MIN_VALUE);
-		return resolver;
-	}
 
 	@Bean
 	public ServletContextTemplateResolver templateResolver() {

@@ -9,7 +9,7 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] { WebModuleConfiguration.class};
+        return new Class[] {WebModuleConfiguration.class};
     }
   
     @Override
