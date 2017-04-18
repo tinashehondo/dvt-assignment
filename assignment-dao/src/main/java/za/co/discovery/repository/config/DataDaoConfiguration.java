@@ -30,65 +30,12 @@ public class DataDaoConfiguration {
     @Resource
     private Environment env;
 
-    /*@Autowired
-    private RouteRepository routeRepository;
-
-    @Autowired
-    private PlanetRepository planetRepository;
-
-    @PostConstruct
-    public void startDBManager() {
-
-        try {
-
-            System.out.print("####POST CONSTRUCT ####");
-
-            CsvFileReaderUtil csvFileReaderUtil = new CsvFileReaderUtil();
-
-            for (Planet planet :csvFileReaderUtil.getPlanets()) {
-                planetRepository.save(planet);
-
-            }
-
-            for (Route route :csvFileReaderUtil.getRoutes()) {
-                routeRepository.save(route);
-
-            }
-
-            System.out.print("####POST CONSTRUCT DONE ####");
-        }catch (Exception e){
-
-        }
-
-
-
-
-        //derby
-       DatabaseManagerSwing.main(new String[] { "--url", "jdbc:derby:memory:testdb;create=true", "--user", "", "--password", "" });
-
-
-    }*/
-
-    /* @Bean
-    public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
-         //dataSource.set
-        dataSource.setUrl(env.getProperty("jdbc.url"));
-        dataSource.setUsername(env.getProperty("jdbc.username"));
-        dataSource.setPassword(env.getProperty("jdbc.password"));
-        return dataSource;
-    }*/
-
     @Bean
     public DataSource dataSource() {
-  return new EmbeddedDatabaseBuilder()
-                //.generateUniqueName(true)
+        return new EmbeddedDatabaseBuilder()
                 .setType(EmbeddedDatabaseType.DERBY)
                 .setScriptEncoding("UTF-8")
                 .ignoreFailedDrops(true)
-                //.addScript("/db/sql/create-db.sql")
-               // .addScripts("/db/create-schema.sql","/db/create-planet.sql", "/db/create-route.sql")
                 .build();
 
 
@@ -96,10 +43,9 @@ public class DataDaoConfiguration {
 
     private Properties hibProperties() {
         Properties properties = new Properties();
-
         properties.setProperty("hibernate.show_sql", env.getProperty("jpa.debug"));
         properties.put("hibernate.dialect", env.getProperty("jpa.dialect"));
-        properties.put("hibernate.hbm2ddl.auto",env.getProperty("hibernate.hbm2ddl.auto"));//create tables if not exist
+        properties.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
         return properties;
     }
 
@@ -127,9 +73,6 @@ public class DataDaoConfiguration {
         txManager.setEntityManagerFactory(entityManagerFactory().getObject());
         return txManager;
     }
-
-
-
 
 
 }

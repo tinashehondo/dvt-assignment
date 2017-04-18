@@ -122,6 +122,9 @@ public class ShortestPathCalculator {
             step = predecessors.get(step);
             path.add(step);
         }
+        System.out.print("checking distance __________>>>>>>>>>>"+distance);
+        System.out.print("checking distance __________>>>>SIZE>>>>>>"+distance.size());
+        System.out.print("checking distance __________>>>>>>PATH SIZE>>>>"+path.size());
 
         // Ordering
         Collections.reverse(path);

@@ -7,12 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import za.co.discovery.model.Planet;
 import za.co.discovery.model.Route;
 import za.co.discovery.service.planet.PlanetService;
 import za.co.discovery.service.route.RouteService;
@@ -35,44 +33,17 @@ public class RouteRestApi {
     private RouteService routeService;
 
 
-    @RequestMapping(value = {"/test/"}, method = RequestMethod.GET)
-    public String test(Model model){
-        logger.debug("**********************testing");
-
-        Planet planet1 = new Planet();
-        planet1.setNode("A");
-        // planet.setName("A");
-        planet1.setName("EARTH");
-
-        planetService.savePlanet(planet1);
-
-        Planet planet2 = new Planet();
-        planet2.setNode("B");
-        // planet.setName("A");
-        planet2.setName("MARS");
-        planetService.savePlanet(planet2);
-
-        Route route = new Route();
-
-        route.setOrigin(planet1);
-        route.setDestination(planet2);
-        route.setDistance(1.44);
-
-        logger.debug("**********************testing*****"+routeService.saveRoute(route));
-        return "index";
-    }
-
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Route>> getAll(){
-        //LOG.info("getting user with id: {}", id);
+    public ResponseEntity<List<Route>> getAllRoutes(){
+        logger.info("getting all Routes:");
         List<Route> routes = routeService.findAllRoutes();
 
         if (routes == null || routes.isEmpty()){
 
-            return new ResponseEntity<List<Route>>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
-        return new ResponseEntity<List<Route>>(routes,HttpStatus.OK);
+        return new ResponseEntity<>(routes,HttpStatus.OK);
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.GET)
@@ -81,18 +52,18 @@ public class RouteRestApi {
         Route route = routeService.findRouteById(id);
 
         if (route == null){
-            return new ResponseEntity<Route>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
-        return new ResponseEntity<Route>(route, HttpStatus.OK);
+        return new ResponseEntity<>(route, HttpStatus.OK);
     }
 
 
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<Void> create(@RequestBody Route route){
-        logger.info("create Route . Route with planet {} ", route);
+        logger.info("create Route . Route with routes {} ", route);
         routeService.saveRoute(route);
-        return new ResponseEntity<Void>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
@@ -101,7 +72,7 @@ public class RouteRestApi {
 
         if (currentRoute == null){
 
-            return new ResponseEntity<Route>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         currentRoute.setDestination(route.getDestination());
         currentRoute.setOrigin(route.getOrigin());
@@ -109,7 +80,7 @@ public class RouteRestApi {
 
 
         routeService.saveRoute(route);
-        return new ResponseEntity<Route>(currentRoute, HttpStatus.OK);
+        return new ResponseEntity<>(currentRoute, HttpStatus.OK);
     }
 
 
@@ -119,11 +90,11 @@ public class RouteRestApi {
 
         if (route == null){
             logger.info("Unable to delete. Route with id {} not found", id);
-            return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
         routeService.deleteRoute(route);
-        return new ResponseEntity<Void>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }

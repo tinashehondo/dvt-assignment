@@ -1,6 +1,7 @@
 package za.co.discovery.repository.config;
 
-import org.hsqldb.util.DatabaseManagerSwing;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import za.co.discovery.model.Planet;
@@ -17,6 +18,8 @@ import javax.annotation.PostConstruct;
 @Configuration
 public class AppBootStrapConfig {
 
+    private static final Logger logger = LoggerFactory.getLogger(AppBootStrapConfig.class);
+
     @Autowired
     private RouteRepository routeRepository;
 
@@ -27,46 +30,19 @@ public class AppBootStrapConfig {
     public void startDBManager() {
 
         try {
-
-            System.out.print("####POST CONSTRUCT ####");
-
+            logger.info("####loading initial Data ####");
             CsvFileReaderUtil csvFileReaderUtil = new CsvFileReaderUtil();
-
-            for (Planet planet :csvFileReaderUtil.getPlanets()) {
+            for (Planet planet : csvFileReaderUtil.getPlanets()) {
                 planetRepository.save(planet);
-
-            }
-            int i=0;
-
-            for (Route route :csvFileReaderUtil.getRoutes()) {
-                i++;
-                System.out.print(i+"####POST CONSTRUCT SAVING ####{} , {}"+route);
-                try {
-                    routeRepository.save(route);
-                }catch (Exception e){
-                    System.out.print("*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +
-                            ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+
-                            ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+
-
-                            ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-                                    +route);
-                    e.printStackTrace();
-                }
-
-
             }
 
-            System.out.print("####POST CONSTRUCT DONE ####");
-        }catch (Exception e){
-
+            for (Route route : csvFileReaderUtil.getRoutes()) {
+                routeRepository.save(route);
+            }
+            logger.info("####loading initial Data ####");
+        } catch (Exception e) {
+            logger.error("###error loading initial data ####");
         }
-
-
-
-
-        //derby
-        DatabaseManagerSwing.main(new String[] { "--url", "jdbc:derby:memory:testdb;create=true", "--user", "", "--password", "" });
-
 
     }
 }

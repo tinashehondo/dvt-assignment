@@ -24,7 +24,6 @@
         <processorPath useClasspath="true" />
         <module name="assigment-api" />
         <module name="assigment-web" />
-        <module name="assignment-business" />
         <module name="assignment-core" />
         <module name="assignment-dao" />
         <module name="assignment-model" />
@@ -34,7 +33,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="assigment-api" target="1.5" />
+      <module name="assigment-api" target="1.7" />
       <module name="assigment-web" target="1.5" />
       <module name="assignment" target="1.5" />
       <module name="assignment-api" target="1.5" />

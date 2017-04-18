@@ -16,7 +16,9 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/assignment-core/pom.xml" />
         <option value="$PROJECT_DIR$/assignment-soap-api/pom.xml" />
+        <option value="$PROJECT_DIR$/assignment-web-old/pom.xml" />
       </set>
     </option>
   </component>

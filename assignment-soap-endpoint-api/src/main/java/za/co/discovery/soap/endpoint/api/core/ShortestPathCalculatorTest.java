@@ -1,6 +1,6 @@
-/*
 package za.co.discovery.soap.endpoint.api.core;
 
+import org.junit.Test;
 import za.co.discovery.model.Graph;
 import za.co.discovery.model.Planet;
 import za.co.discovery.model.Route;
@@ -12,18 +12,16 @@ import java.util.List;
 import static junit.framework.TestCase.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-//import za.co.discovery.logic.ShortestPathCalculator;
 
-*/
-/**
+/*
  * Created by tinashehondo on 4/10/17.
- *//*
+*/
 
 public class ShortestPathCalculatorTest {
     private List<Planet> nodes;
     private List<Route> edges;
 
-   // @Test
+    @Test
     public void testExcute() {
         nodes = new ArrayList<Planet>();
         edges = new ArrayList<Route>();
@@ -47,9 +45,8 @@ public class ShortestPathCalculatorTest {
 
         // Lets check from location Loc_1 to Loc_10
         Graph graph = new Graph(nodes, edges);
-        ShortestPathCalculator shortestPathCalculator = new ShortestPathCalculator(graph);
-        shortestPathCalculator.execute(nodes.get(0));
-        LinkedList<Planet> path = shortestPathCalculator.getPath(nodes.get(10));
+        ShortestPathCalculator shortestPathCalculator = new ShortestPathCalculator();
+        LinkedList<Planet> path = shortestPathCalculator.getShortestPath(graph,nodes.get(0),nodes.get(10));
 
         assertNotNull(path);
         assertTrue(path.size() > 0);
@@ -60,9 +57,6 @@ public class ShortestPathCalculatorTest {
 
     }
 
-    public static void main(String[] args) {
-        new ShortestPathCalculatorTest().testExcute();
-    }
     private void addLane(int routeId,int sourceLocNo, int destLocNo,
                          double duration) {
         Route lane = new Route(routeId,duration,nodes.get(sourceLocNo),nodes.get(destLocNo));
@@ -70,4 +64,3 @@ public class ShortestPathCalculatorTest {
     }
 
 }
-*/
