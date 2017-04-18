@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://www.discovery/assignment/api/soap" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.discovery/assignment/api/soap" targetNamespace="http://www.discovery/assignment/api/soap">
+  <wsdl:types>
+    <xs:schema xmlns:ns1="http://www.discovery/assignment/api/soap" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.discovery/assignment/api/soap" version="1.0">
+
+
+    <!-- Custom Messages the Spring-WS looks for usring *Request and *Response -->
+    <xs:element name="calculateShortestRouteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="destination" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="calculateShortestRouteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" name="route" type="ns1:route"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Application Objects -->
+    <xs:complexType name="route">
+        <xs:sequence>
+            <xs:element name="distance" type="xs:double"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="planets" type="tns:planet"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="planet">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="node" type="xs:string"/>
+            <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="calculateShortestRouteResponse">
+    <wsdl:part element="tns:calculateShortestRouteResponse" name="calculateShortestRouteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="calculateShortestRouteRequest">
+    <wsdl:part element="tns:calculateShortestRouteRequest" name="calculateShortestRouteRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ShortestRouteApiPort">
+    <wsdl:operation name="calculateShortestRoute">
+      <wsdl:input message="tns:calculateShortestRouteRequest" name="calculateShortestRouteRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:calculateShortestRouteResponse" name="calculateShortestRouteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ShortestRouteApiPortSoap11" type="tns:ShortestRouteApiPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="calculateShortestRoute">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="calculateShortestRouteRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="calculateShortestRouteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ShortestRouteApiPortService">
+    <wsdl:port binding="tns:ShortestRouteApiPortSoap11" name="ShortestRouteApiPortSoap11">
+      <soap:address location="http://127.0.0.1:8080/assignment-soap-endpoint-api/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
