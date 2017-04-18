@@ -1,4 +1,4 @@
-package com.assignment.admin.confinguration;
+package za.co.discovery.web.confinguration;
 
 
 import javax.servlet.annotation.WebListener;
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSessionListener;
 import java.util.Date;
 
 /**
- * Created by primrose on 12/9/16.
+ * Created by tinashehondo
  */
 @WebListener
 public class HttpSessionChecker implements HttpSessionListener {

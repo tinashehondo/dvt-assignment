@@ -75,7 +75,7 @@ public class ShortestRouteSoapApi {
 
         discovery.assignment.api.soap.Route route = new discovery.assignment.api.soap.Route();
         //calculate distance
-        route.setDistance(calculateDistance(routeList,path));
+        //route.setDistance(calculateDistance(routeList,path));
         for (Planet p : path) {
             route.getPlanets().add(planetModelToPlanetConvertor.convert(p));
         }
@@ -89,9 +89,6 @@ public class ShortestRouteSoapApi {
         logger.info("***************calculateDistance# PATH#{}", path);
         logger.info("***************calculateDistance# ROUTE LIST#{}", routeList);
         double totalDistance = 0.0;
-
-
-
 
         for (Planet p : path) {
             logger.info("***************calculateDistance# <<<<path P>>>>>>>>>#{}", p);

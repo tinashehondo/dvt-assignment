@@ -14,17 +14,7 @@
 
 
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework</groupId>-->
-            <!--<artifactId>spring-beans</artifactId>-->
-            <!--<version>4.3.5.RELEASE</version>-->
-        <!--</dependency>-->
 
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.ws</groupId>-->
-            <!--<artifactId>spring-ws-core</artifactId>-->
-            <!--<version>2.4.0.RELEASE</version>-->
-        <!--</dependency>-->
 
         <dependency>
             <groupId>org.thymeleaf</groupId>
@@ -52,9 +42,11 @@
             <version>4.2.2.RELEASE</version>
         </dependency>
 
+
+
     </dependencies>
     <build>
-        <finalName>assignment-api</finalName>
+        <finalName>assignment-web</finalName>
         <plugins>
 
                 <plugin>
@@ -77,46 +69,61 @@
                     </configuration>
                 </plugin>
 
-            <!--<plugin>-->
-                <!--<groupId>org.eclipse.jetty</groupId>-->
-                <!--<artifactId>jetty-maven-plugin</artifactId>-->
-                <!--<version>9.2.11.v20150529</version>-->
-                <!--<configuration>-->
-                    <!--<scanIntervalSeconds>10</scanIntervalSeconds>-->
-                    <!--<webApp>-->
-                        <!--<contextPath>/assigment-web</contextPath>-->
-                    <!--</webApp>-->
-                    <!--<httpConnector>-->
-                        <!--<port>8083</port>-->
-                    <!--</httpConnector>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.11.v20150529</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webApp>
+                        <contextPath>/assigment-web</contextPath>
+                    </webApp>
+                    <httpConnector>
+                        <port>8080</port>
+                    </httpConnector>
+                </configuration>
+            </plugin>
 
 
-            <!--&lt;!&ndash; tag::wsdl[] &ndash;&gt;-->
-            <!--<plugin>-->
-                <!--<groupId>org.jvnet.jaxb2.maven2</groupId>-->
-                <!--<artifactId>maven-jaxb2-plugin</artifactId>-->
-                <!--<version>0.13.1</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<goals>-->
-                            <!--<goal>generate</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-                <!--<configuration>-->
-                    <!--<schemaLanguage>WSDL</schemaLanguage>-->
-                    <!--<generatePackage>za.co.discovery.soap.endpoint.client.wsdl</generatePackage>-->
-                    <!--<schemas>-->
-                        <!--<schema>-->
-                            <!--&lt;!&ndash;<url>http://localhost:8080/assignment-soap-service/ws/routes.wsdl</url>&ndash;&gt;-->
-                            <!--<url>http://127.0.0.1:8080/assignment-soap-endpoint-api/ws/routes.wsdl</url>-->
-                        <!--</schema>-->
-                    <!--</schemas>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-            <!--&lt;!&ndash; end::wsdl[] &ndash;&gt;-->
+            <plugin>
+                <groupId>org.jvnet.jax-ws-commons</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <wsdlFiles>
+                                <wsdlFile>${project.basedir}/src/main/resources/wsdl/routes.wsdl</wsdlFile>
+                            </wsdlFiles>
+                            <packageName>za.co.discovery.assignment.assignment.ws.client</packageName>
+                            <vmArgs>
+                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                            </vmArgs>
+                            <wsdlLocation>http://localhost:8081/assignment-soap-service/ws/routes.wsdl</wsdlLocation>
+                            <staleFile>${project.build.directory}/jaxws/stale/routes.stale</staleFile>
+                        </configuration>
+                        <id>wsimport-generate-routes</id>
+                        <phase>generate-sources</phase>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>javax.xml</groupId>
+                        <artifactId>webservices-api</artifactId>
+                        <version>2.0</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
+                    <xnocompile>true</xnocompile>
+                    <verbose>true</verbose>
+                    <extension>true</extension>
+                    <catalog>${basedir}/src/jax-ws-catalog.xml</catalog>
+                </configuration>
+            </plugin>
 
         </plugins>
     </build>
