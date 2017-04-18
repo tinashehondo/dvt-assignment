@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>tinashehondo</artifactId>
+        <groupId>za.co.discovery.assignment</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>war</packaging>
+
+    <artifactId>assigment-web</artifactId>
+
+
+    <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-beans</artifactId>-->
+            <!--<version>4.3.5.RELEASE</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.ws</groupId>-->
+            <!--<artifactId>spring-ws-core</artifactId>-->
+            <!--<version>2.4.0.RELEASE</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>2.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring4</artifactId>
+            <version>2.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity4</artifactId>
+            <version>2.1.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>za.co.discovery.assignment</groupId>
+            <artifactId>assignment-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>4.2.2.RELEASE</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <finalName>assignment-api</finalName>
+        <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.2</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                        <warName>assignment-web</warName>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+
+            <!--<plugin>-->
+                <!--<groupId>org.eclipse.jetty</groupId>-->
+                <!--<artifactId>jetty-maven-plugin</artifactId>-->
+                <!--<version>9.2.11.v20150529</version>-->
+                <!--<configuration>-->
+                    <!--<scanIntervalSeconds>10</scanIntervalSeconds>-->
+                    <!--<webApp>-->
+                        <!--<contextPath>/assigment-web</contextPath>-->
+                    <!--</webApp>-->
+                    <!--<httpConnector>-->
+                        <!--<port>8083</port>-->
+                    <!--</httpConnector>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+
+
+            <!--&lt;!&ndash; tag::wsdl[] &ndash;&gt;-->
+            <!--<plugin>-->
+                <!--<groupId>org.jvnet.jaxb2.maven2</groupId>-->
+                <!--<artifactId>maven-jaxb2-plugin</artifactId>-->
+                <!--<version>0.13.1</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>generate</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<configuration>-->
+                    <!--<schemaLanguage>WSDL</schemaLanguage>-->
+                    <!--<generatePackage>za.co.discovery.soap.endpoint.client.wsdl</generatePackage>-->
+                    <!--<schemas>-->
+                        <!--<schema>-->
+                            <!--&lt;!&ndash;<url>http://localhost:8080/assignment-soap-service/ws/routes.wsdl</url>&ndash;&gt;-->
+                            <!--<url>http://127.0.0.1:8080/assignment-soap-endpoint-api/ws/routes.wsdl</url>-->
+                        <!--</schema>-->
+                    <!--</schemas>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+            <!--&lt;!&ndash; end::wsdl[] &ndash;&gt;-->
+
+        </plugins>
+    </build>
+
+
+
+</project>
