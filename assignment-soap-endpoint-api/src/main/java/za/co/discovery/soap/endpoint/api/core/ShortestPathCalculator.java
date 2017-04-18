@@ -13,21 +13,15 @@ import java.util.*;
  */
 @Component
 public class ShortestPathCalculator {
-    private  List<Planet> nodes;
-    private  List<Route> edges;
+    private List<Planet> nodes;
+    private List<Route> edges;
     private Set<Planet> settledNodes;
     private Set<Planet> unSettledNodes;
     private Map<Planet, Planet> predecessors;
     private Map<Planet, Double> distance;
 
-  /*  public ShortestPathCalculator(Graph graph) {
-        // create a copy of the array so that we can operate on this array
-        this.nodes = new ArrayList<Planet>(graph.getVertexes());
-        this.edges = new ArrayList<Route>(graph.getEdges());
-    }*/
-
     public void setGraph(Graph graph) {
-        // create a copy of the array so that we can operate on this array
+
         this.nodes = new ArrayList<Planet>(graph.getVertexes());
         this.edges = new ArrayList<Route>(graph.getEdges());
     }
@@ -60,16 +54,18 @@ public class ShortestPathCalculator {
             }
         }
 
+
     }
 
     private double getDistance(Planet node, Planet target) {
+
         for (Route edge : edges) {
             if (edge.getOrigin().equals(node)
                     && edge.getDestination().equals(target)) {
                 return edge.getDistance();
             }
         }
-        throw new RuntimeException("Should not happen");
+        throw new RuntimeException("Not expected to happen");
     }
 
     private List<Planet> getNeighbors(Planet node) {
@@ -100,6 +96,7 @@ public class ShortestPathCalculator {
     private boolean isSettled(Planet vertex) {
         return settledNodes.contains(vertex);
     }
+
     private double getShortestDistance(Planet destination) {
         Double d = distance.get(destination);
 
@@ -111,12 +108,9 @@ public class ShortestPathCalculator {
     }
 
 
-
-    /*
-     * This method returns the path from the source to the selected target and
-     * NULL if no path exists
-     */
-    public LinkedList<Planet> getPath(Planet target) {
+    public LinkedList<Planet> getShortestPath(Graph graph, Planet origin, Planet target) {
+        setGraph(graph);
+        execute(origin);
         LinkedList<Planet> path = new LinkedList<Planet>();
         Planet step = target;
         // check if a path exists
@@ -128,11 +122,11 @@ public class ShortestPathCalculator {
             step = predecessors.get(step);
             path.add(step);
         }
-        // Put it into the correct order
+
+        // Ordering
         Collections.reverse(path);
         return path;
     }
-
 
 
 }
