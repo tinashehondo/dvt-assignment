@@ -16,6 +16,7 @@
         <module>assignment-web</module>
         <module>assignment-core</module>
         <module>assignment-soap-endpoint-api</module>
+        <module>assignment-ws.client</module>
     </modules>
 
     <properties>

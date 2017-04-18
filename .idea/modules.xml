@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/assignment-model/assignment-model.iml" filepath="$PROJECT_DIR$/assignment-model/assignment-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/assignment-service/assignment-service.iml" filepath="$PROJECT_DIR$/assignment-service/assignment-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/assignment-soap-endpoint-api/assignment-soap-endpoint-api.iml" filepath="$PROJECT_DIR$/assignment-soap-endpoint-api/assignment-soap-endpoint-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assignment-ws.client/assignment-ws.client.iml" filepath="$PROJECT_DIR$/assignment-ws.client/assignment-ws.client.iml" />
     </modules>
   </component>
 </project>

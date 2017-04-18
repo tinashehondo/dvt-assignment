@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/assignment-api" />
     <file type="web" url="file://$PROJECT_DIR$/assignment-soap-api" />
     <file type="web" url="file://$PROJECT_DIR$/assignment-soap-endpoint-api" />
+    <file type="web" url="file://$PROJECT_DIR$/assignment-web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -36,4 +37,5 @@
   <component name="SvnBranchConfigurationManager">
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
 </project>

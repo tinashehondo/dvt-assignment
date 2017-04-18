@@ -1,11 +1,6 @@
-/home/tinashehondo/code/assignment/assignment-web/src/main/java/za/co/discovery/web/config/RoutesWebInitializer.java
-/home/tinashehondo/code/assignment/assignment-web/src/main/java/za/co/discovery/web/config/CalculateShortestRouteConfiguration.java
-/home/tinashehondo/code/assignment/assignment-web/src/main/java/za/co/discovery/web/config/RoutesWebConfig.java
-/home/tinashehondo/code/assignment/assignment-web/target/generated-sources/xjc/za/co/discovery/soap/endpoint/client/wsdl/CalculateShortestRouteRequest.java
-/home/tinashehondo/code/assignment/assignment-web/target/generated-sources/xjc/za/co/discovery/soap/endpoint/client/wsdl/ObjectFactory.java
-/home/tinashehondo/code/assignment/assignment-web/target/generated-sources/xjc/za/co/discovery/soap/endpoint/client/wsdl/CalculateShortestRouteResponse.java
-/home/tinashehondo/code/assignment/assignment-web/src/main/java/za/co/discovery/web/controller/RouteController.java
-/home/tinashehondo/code/assignment/assignment-web/target/generated-sources/xjc/za/co/discovery/soap/endpoint/client/wsdl/Planet.java
-/home/tinashehondo/code/assignment/assignment-web/target/generated-sources/xjc/za/co/discovery/soap/endpoint/client/wsdl/package-info.java
-/home/tinashehondo/code/assignment/assignment-web/target/generated-sources/xjc/za/co/discovery/soap/endpoint/client/wsdl/Route.java
-/home/tinashehondo/code/assignment/assignment-web/src/main/java/za/co/discovery/web/client/RoutesClient.java
+/home/primrose/Documents/Hondo_project/dvt-assignment/assignment-web/src/main/java/com/assignment/admin/controllers/PlanetController.java
+/home/primrose/Documents/Hondo_project/dvt-assignment/assignment-web/src/main/java/com/assignment/admin/confinguration/WebInitializer.java
+/home/primrose/Documents/Hondo_project/dvt-assignment/assignment-web/src/main/java/com/assignment/admin/confinguration/HttpSessionChecker.java
+/home/primrose/Documents/Hondo_project/dvt-assignment/assignment-web/src/main/java/com/assignment/admin/confinguration/WebModuleConfiguration.java
+/home/primrose/Documents/Hondo_project/dvt-assignment/assignment-web/src/main/java/com/assignment/admin/confinguration/WebFilter.java
+/home/primrose/Documents/Hondo_project/dvt-assignment/assignment-web/src/main/java/com/assignment/admin/controllers/DefaultController.java
