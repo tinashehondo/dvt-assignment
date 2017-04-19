@@ -36,6 +36,8 @@ public class DataDaoConfiguration {
                 .setType(EmbeddedDatabaseType.DERBY)
                 .setScriptEncoding("UTF-8")
                 .ignoreFailedDrops(true)
+                //.addScript("/db/sql/create-schema.sql")
+                .addScripts("/db/sql/create-schema.sql","/db/sql/create-planet.sql", "/db/sql/create-route.sql")
                 .build();
 
 
